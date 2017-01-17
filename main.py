@@ -1,17 +1,13 @@
 from pprint import pprint
-from tkinter import *
 import os
 from cmd import Cmd
 
-
-# window = Tk()
-# input_box = Entry(window)
 
 class Shell(Cmd):
     prompt = ':'
 
     def do_generate(self, git):
-        '''Generates stats for git repository given in parameters'''
+        """Generates stats for git repository given in parameters"""
         name = git.split("/")[-1].split(".")[0]
         print("Checking repository existency")
         if not os.path.exists(name):
@@ -29,7 +25,7 @@ class Shell(Cmd):
         print("Analysis done")
 
     def do_projects(self, projects):
-        '''Show projects'''
+        """Show projects"""
         folders = [d for d in os.listdir('.')]
 
         pprint(folders)
