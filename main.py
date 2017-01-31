@@ -27,5 +27,5 @@ class Shell(Cmd):
 
 if __name__ == '__main__':
     shell = Shell()
-    shell.onecmd("inspect https://github.com/google/gson.git")
+    # shell.onecmd("inspect https://github.com/google/gson.git")
     shell.cmdloop()
